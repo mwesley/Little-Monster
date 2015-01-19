@@ -30,7 +30,6 @@ public class PlayerMovement : MonoBehaviour {
 		if (canMove) 
 		{
 			InputMovement ();
-			inputControl ();
 		}
 		else 
 		{
@@ -87,18 +86,4 @@ public class PlayerMovement : MonoBehaviour {
 			rigidbody2D.velocity = new Vector2 (move * speed, rigidbody2D.velocity.y);
 		}
 	}
-
-	void inputControl() {
-		if (Input.GetKeyDown (KeyCode.E)) {
-			GameObject[] ropelist = GameObject.FindGameObjectsWithTag("Spike");
-			foreach(GameObject ropes in ropelist) {
-				float dis = Vector2.Distance(transform.position, ropes.transform.position);
-				if(dis <= cutRange) {
-					SpikeScript scriptTemp = (SpikeScript)ropes.GetComponentInParent(typeof(SpikeScript));
-					scriptTemp.cutRope();
-				}
-			}
-		}
-	}
-
 }

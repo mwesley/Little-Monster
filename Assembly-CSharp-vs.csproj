@@ -51,10 +51,10 @@
      <Compile Include="Assets\AutoTileSet\Source\AutoTileSetManagerEditor.cs" />
      <Compile Include="Assets\AutoTileSet\Source\AutoTileSetQuad.cs" />
      <Compile Include="Assets\AutoTileSet\Source\AutoTileSetSprite.cs" />
+     <Compile Include="Assets\ButtonScript.cs" />
      <Compile Include="Assets\Scripts\BossAI.cs" />
      <Compile Include="Assets\Scripts\CheckpointControl.cs" />
      <Compile Include="Assets\Scripts\ClawAttack.cs" />
-     <Compile Include="Assets\Scripts\Clawhit.cs" />
      <Compile Include="Assets\Scripts\CollisionPlatforms.cs" />
      <Compile Include="Assets\Scripts\DestroyOnContact.cs" />
      <Compile Include="Assets\Scripts\EnemyMoveAI.cs" />

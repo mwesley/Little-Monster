@@ -4,6 +4,7 @@ using System.Collections;
 public class BossAI : MonoBehaviour {
 
 	GameObject target;		//The player
+	Transform spill;		//The spilldown part of the boss
 	bool canAttack;			//Whether the boss can shoot again yet
 	bool canBeHit;			//Whether the tongue is out or not
 	float attackCooldown;	//How often the boss can attack
@@ -15,7 +16,8 @@ public class BossAI : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		target = GameObject.FindGameObjectWithTag ("Player");
-		tongueRange = 5.0f;
+		spill = transform.FindChild ("Spilldown");
+		tongueRange = 11.0f;
 		attackCooldown = 1.0f;
 		cooldownTimer = 0.0f;
 		dist = 0.0f;
@@ -47,17 +49,18 @@ public class BossAI : MonoBehaviour {
 			canAttack = false;
 			tongueScript.setShooting (target.transform.position);
 		}
+
+		spill.renderer.material.color = renderer.material.color;
 	}
 
 
 	void OnCollisionEnter2D(Collision2D coll) {
 		if (coll.gameObject.tag == "Spike") {
-			if(canBeHit) {
-				//Hit
-				Destroy(gameObject);
+			if (canBeHit) {
+				Destroy (gameObject);
 			}
-			SpikeScript tempScript = (SpikeScript)coll.gameObject.GetComponent(typeof(SpikeScript));
-			tempScript.destroySpike();
+			SpikeScript tempScript = (SpikeScript)coll.gameObject.GetComponent (typeof(SpikeScript));
+			tempScript.destroySpike ();
 		}
 	}
 }
