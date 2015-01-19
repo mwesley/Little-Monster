@@ -53,6 +53,7 @@ public class BossAI : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D coll) {
 		if (coll.gameObject.tag == "Spike") {
 			if(canBeHit) {
+				//Hit
 				Destroy(gameObject);
 			}
 			SpikeScript tempScript = (SpikeScript)coll.gameObject.GetComponent(typeof(SpikeScript));
