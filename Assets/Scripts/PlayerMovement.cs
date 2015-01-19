@@ -81,7 +81,7 @@ public class PlayerMovement : MonoBehaviour {
 
 	void InputMovement()
 	{
-		if (!bouncing) {
+		if (!bouncing && !PlayerStats.killed) {
 			float move = Input.GetAxis ("Horizontal");
 			rigidbody2D.velocity = new Vector2 (move * speed, rigidbody2D.velocity.y);
 		}
