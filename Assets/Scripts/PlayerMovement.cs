@@ -44,7 +44,7 @@ public class PlayerMovement : MonoBehaviour {
 
 	void Update()
 	{
-		if (grounded && Input.GetKeyDown(KeyCode.Space)) 
+		if (grounded && Input.GetButtonDown("Jump")) 
 		{
 			rigidbody2D.AddForce(new Vector2(0f, jumpForce));
 		}
