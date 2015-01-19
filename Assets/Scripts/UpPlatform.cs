@@ -19,7 +19,7 @@ public class UpPlatform : MonoBehaviour
 		// Use this for initialization
 		void Start ()
 		{
-				
+				//test commit from uni
 		}
 	
 		// Update is called once per frame
