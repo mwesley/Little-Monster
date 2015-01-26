@@ -46,6 +46,7 @@ public class PlayerStats : MonoBehaviour {
 	{
         player.transform.localScale = Vector3.zero;
         player.rigidbody2D.transform.position = respawnLocation;
+		player.rigidbody2D.velocity = Vector3.zero;
         killed = true;
 
 	}
