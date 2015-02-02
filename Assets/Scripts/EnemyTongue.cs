@@ -22,6 +22,7 @@ public class EnemyTongue : MonoBehaviour {
 		firing = false;
 		returning = false;
 		player = GameObject.FindGameObjectWithTag ("Player");
+		collider2D.enabled = false;
 	}
 	
 	// Update is called once per frame
@@ -34,6 +35,7 @@ public class EnemyTongue : MonoBehaviour {
 			if (distFire <= returnRange) {
 				firing = false;
 				returning = true;
+				collider2D.enabled = false;
 			}
 		} else if (returning) {
 			transform.position = Vector2.MoveTowards (transform.position, returnPos, speed * Time.deltaTime);
@@ -56,10 +58,15 @@ public class EnemyTongue : MonoBehaviour {
 	public void setShooting(Vector2 newTarget) {
 		target = newTarget;
 		firing = true;
+		collider2D.enabled = true;
 	}
 
 	void OnCollisionEnter2D(Collision2D coll) {
-		Debug.Log (coll.gameObject.name);
+		if (coll.gameObject.tag == "Platform") {
+			firing = false;
+			returning = true;
+			collider2D.enabled = false;
+		}
 		if (coll.gameObject.tag == "Player" && firing) {
 			PlayerMovement movement = (PlayerMovement)player.GetComponent (typeof(PlayerMovement));
 			if (player.transform.position.y > transform.position.y + 0.15f) {
@@ -73,6 +80,7 @@ public class EnemyTongue : MonoBehaviour {
 			}
 			firing = false;
 			returning = true;
+			collider2D.enabled = false;
 		}
 	}
 }

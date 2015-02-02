@@ -42,10 +42,8 @@ public class PlayerMovement : MonoBehaviour {
 		}
 	}
 
-	void Update()
-	{
-		if (grounded && Input.GetButtonDown("Jump")) 
-		{
+	void Update() {
+		if (grounded && Input.GetKeyDown(KeyCode.Space)) {
 			rigidbody2D.AddForce(new Vector2(0f, jumpForce));
 		}
 		if (bouncing) {
@@ -81,7 +79,7 @@ public class PlayerMovement : MonoBehaviour {
 
 	void InputMovement()
 	{
-		if (!bouncing && !PlayerStats.killed) {
+		if (!bouncing) {
 			float move = Input.GetAxis ("Horizontal");
 			rigidbody2D.velocity = new Vector2 (move * speed, rigidbody2D.velocity.y);
 		}
