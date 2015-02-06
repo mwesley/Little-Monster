@@ -42,17 +42,11 @@ public class PlayerMovement : MonoBehaviour {
 		}
 	}
 
-<<<<<<< HEAD
-	void Update() {
-		if (grounded && Input.GetKeyDown(KeyCode.Space)) {
-			rigidbody2D.AddForce(new Vector2(0f, jumpForce));
-=======
 	void Update()
 	{
 		if (grounded && Input.GetButtonDown("Jump")) 
 		{
 			rigidbody2D.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
->>>>>>> origin/HeliosinBranch
 		}
 		if (bouncing) {
 			sec += Time.deltaTime;
