@@ -46,7 +46,7 @@ public class PlayerMovement : MonoBehaviour {
 	{
 		if (grounded && Input.GetButtonDown("Jump")) 
 		{
-			rigidbody2D.AddForce(new Vector2(0f, jumpForce));
+			rigidbody2D.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
 		}
 		if (bouncing) {
 			sec += Time.deltaTime;
@@ -84,6 +84,23 @@ public class PlayerMovement : MonoBehaviour {
 		if (!bouncing && !PlayerStats.killed) {
 			float move = Input.GetAxis ("Horizontal");
 			rigidbody2D.velocity = new Vector2 (move * speed, rigidbody2D.velocity.y);
+		}
+	}
+
+	void OnCollisionEnter2D(Collision2D col)
+	{
+		if (col.gameObject.tag == "Platform") 
+		{
+			Debug.Log ("I'm on a platform motherfucker!");
+			transform.parent = col.transform;
+		}
+	}
+	void OnCollisionExit2D(Collision2D col)
+	{
+		if(col.gameObject.tag == "Platform")
+		{
+			Debug.Log ("Awww....no platform....");
+			transform.parent = null;
 		}
 	}
 }
