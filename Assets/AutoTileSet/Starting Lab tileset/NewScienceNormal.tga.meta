@@ -1,12 +1,11 @@
 fileFormatVersion: 2
-guid: ccdac576824ed99419630292f8c85f90
+guid: e9764679b59bea24da8a7a8c1ac66aad
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: Science1Tileset1
+  fileIDToRecycleName: {}
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 0
+    enableMipMap: 1
     linearTexture: 0
     correctGamma: 0
     fadeOut: 0
