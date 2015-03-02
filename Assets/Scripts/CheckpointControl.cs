@@ -8,6 +8,7 @@ public class CheckpointControl : MonoBehaviour {
 	PlayerStats stats;
 	private bool checkpointUsed;
 
+
 	// Use this for initialization
 	void Start () {
 		stats = statObj.GetComponent<PlayerStats> ();
