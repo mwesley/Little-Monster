@@ -10,15 +10,20 @@ public class PlayerMovement : MonoBehaviour {
 	public LayerMask whatIsGround;
 	public float jumpForce = 100f;
 	public bool canMove;
+	public bool canClimb;
+	public bool canDoubleJump;
 	bool bouncing;
+	bool canJump;
 	float sec;
 	float cutRange;
 	float t;
+	private float _xFactor;
 
 	// Use this for initialization
 	void Start () {
 		bouncing = false;
 		canMove = true;
+		canClimb = false;
 		sec = 0.0f;
 		cutRange = 2.0f;
 		t = 0.0f;
@@ -27,9 +32,17 @@ public class PlayerMovement : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate () {
 		grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
+		if (grounded)
+			canJump = true;
 		if (canMove) 
 		{
 			InputMovement ();
+
+			if(canClimb)
+				Climb();
+
+			if(canDoubleJump)
+				DoubleJump();
 		}
 		else 
 		{
@@ -47,6 +60,7 @@ public class PlayerMovement : MonoBehaviour {
 		if (grounded && Input.GetButtonDown("Jump")) 
 		{
 			rigidbody2D.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+			//jumped = true;
 		}
 		if (bouncing) {
 			sec += Time.deltaTime;
@@ -56,6 +70,7 @@ public class PlayerMovement : MonoBehaviour {
 			}
 		}
 	}
+
 	public void bounce(int side) {
 		switch (side) {
 		case 1:
@@ -81,10 +96,48 @@ public class PlayerMovement : MonoBehaviour {
 
 	void InputMovement()
 	{
-		if (!bouncing && !PlayerStats.killed) {
-			float move = Input.GetAxis ("Horizontal");
-			rigidbody2D.velocity = new Vector2 (move * speed, rigidbody2D.velocity.y);
+				float move = Input.GetAxis ("Horizontal");
+
+				if (!bouncing && !PlayerStats.killed && grounded) {
+						rigidbody2D.velocity = new Vector2 (move * speed, rigidbody2D.velocity.y);
+				} else if (!grounded) {
+						_xFactor = move * speed * 2f;
+						rigidbody2D.AddForce (new Vector2 (_xFactor, 0));
+						if (rigidbody2D.velocity.x >= speed) {
+								rigidbody2D.velocity = new Vector2 (speed, rigidbody2D.velocity.y);
+						} else if (rigidbody2D.velocity.x <= -speed) {
+								rigidbody2D.velocity = new Vector2 (-speed, rigidbody2D.velocity.y);
+						}
+
+				}
 		}
+
+	void Climb()
+	{
+		float newMove = Input.GetAxis ("Vertical");
+		rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, newMove * speed);
+	}
+	void DoubleJump()
+	{
+		if (!grounded) 
+		{
+			if(canJump)
+			{
+				if(Input.GetButtonDown("Jump"))
+				{
+					//rigidbody.velocity = new Vector2(rigidbody.velocity.x, 0f);
+					float yVelocity = rigidbody2D.velocity.y;
+					float yFactor = 0;
+					if(yVelocity < 0)
+					{
+						yFactor = -yVelocity;
+					}
+					rigidbody2D.AddForce(new Vector2(0f, jumpForce + yFactor), ForceMode2D.Impulse);
+					canJump = false;
+				}
+
+			}
+		} 
 	}
 
 	void OnCollisionEnter2D(Collision2D col)
