@@ -24,7 +24,6 @@ public class PlayerMovement : MonoBehaviour {
 		bouncing = false;
 		canMove = true;
 		canClimb = false;
-		canDoubleJump = false;
 		sec = 0.0f;
 		cutRange = 2.0f;
 		t = 0.0f;
