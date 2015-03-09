@@ -1,7 +1,15 @@
 fileFormatVersion: 2
 guid: 76884e4840e9176468f8b06eb14eb4a3
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: SlimeGuy 1_0
+    21300002: SlimeGuy 1_2
+    21300004: SlimeGuy 1_3
+    21300006: SlimeGuy 1_6
+    21300008: SlimeGuy 1_7
+    21300010: SlimeGuy 1_8
+    21300012: SlimeGuy 1_9
+    21300014: SlimeGuy 1_10
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -25,13 +33,13 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -42,6 +50,86 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: SlimeGuy 1_0
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 432
+        width: 84
+        height: 108
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SlimeGuy 1_2
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 430
+        width: 108
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SlimeGuy 1_3
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 35
+        width: 254
+        height: 471
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SlimeGuy 1_6
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 334
+        width: 104
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SlimeGuy 1_7
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 225
+        width: 84
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SlimeGuy 1_8
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 237
+        width: 109
+        height: 68
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SlimeGuy 1_9
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 39
+        width: 81
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SlimeGuy 1_10
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 60
+        width: 58
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
