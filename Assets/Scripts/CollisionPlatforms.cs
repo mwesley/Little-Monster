@@ -9,10 +9,13 @@ public class CollisionPlatforms : MonoBehaviour {
 	public bool moving;
 	public float speed;
 	GameObject parent;
+    RemovePlatform rem;
 	
 	// Use this for initialization
 	void Start () {
 		parent = this.gameObject.transform.parent.gameObject;
+
+        rem = GetComponent<RemovePlatform>();
 	}
 	
 	// Update is called once per frame
@@ -20,6 +23,10 @@ public class CollisionPlatforms : MonoBehaviour {
 	{
 		if (moving) 
 		{
+            if(rem !=null)
+            {
+                rem.removePlatform();
+            }
 			if(movesUp)
 			{
 				if(parent.transform.position.y < maxHeight.y)

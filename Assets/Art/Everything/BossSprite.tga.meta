@@ -1,0 +1,253 @@
+fileFormatVersion: 2
+guid: 31ed5c9de3b05d64ab1a820feac06e7e
+timeCreated: 1425568461
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: spikes2
+    21300002: tounge
+    21300004: spikes1
+    21300006: top
+    21300008: BottomMouth
+    21300010: top2
+    21300012: close1
+    21300014: close2
+    21300016: eye1
+    21300018: eye2
+    21300020: BottomMouth2
+    21300022: Mouth
+    21300024: eyelid1
+    21300026: Mouth2
+    21300028: top3
+    21300030: eyelid2
+    21300032: eyelid3
+    21300034: eyelid4
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: spikes2
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 458
+        width: 124
+        height: 78
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: tounge
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 489
+        width: 69
+        height: 34
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: spikes1
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 462
+        width: 118
+        height: 72
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: top
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 359
+        width: 208
+        height: 49
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BottomMouth
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 366
+        width: 246
+        height: 54
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: top2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 273
+        width: 204
+        height: 55
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: close1
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 252
+        width: 29
+        height: 18
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: close2
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 256
+        width: 20
+        height: 12
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: eye1
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 204
+        width: 47
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: eye2
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 207
+        width: 39
+        height: 29
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BottomMouth2
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 173
+        width: 249
+        height: 61
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mouth
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 124
+        width: 199
+        height: 45
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: eyelid1
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 85
+        width: 43
+        height: 32
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: Mouth2
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 4
+        width: 204
+        height: 67
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: top3
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 41
+        width: 207
+        height: 58
+      alignment: 9
+      pivot: {x: .536680996, y: .50877589}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: eyelid2
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 83
+        width: 47
+        height: 33
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: eyelid3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 5
+        width: 51
+        height: 37
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: eyelid4
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 7
+        width: 38
+        height: 39
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

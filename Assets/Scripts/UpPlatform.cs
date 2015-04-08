@@ -6,10 +6,10 @@ public class UpPlatform : MonoBehaviour
 
 		public Vector2 endPosition;
 		public float speed;
-		private float t = 0.0f;
 		private bool reversing;
 		private bool forwarding;
 		public Vector2 startPosition;
+        private float move = 0.0f;
 
 		// Use this for initialization
 		void Start ()
@@ -26,20 +26,20 @@ public class UpPlatform : MonoBehaviour
 		void FixedUpdate ()
 		{
 
-				this.transform.position = Vector2.Lerp (startPosition, endPosition, speed * t);
+				this.transform.position = Vector2.Lerp (startPosition, endPosition, move);
 
-				if (t >= 1f) {
+				if (move >= 1f) {
 						reversing = true;
 						forwarding = false;
-				} else if (t <= 0f) {
+				} else if (move <= 0f) {
 						reversing = false;
 						forwarding = true;
 				}
 
 				if (forwarding) {
-						t += Time.deltaTime;
+						move += Time.deltaTime * speed;
 				} else if (reversing) {
-						t -= Time.deltaTime;
+						move -= Time.deltaTime * speed;
 				}
 		}
 }

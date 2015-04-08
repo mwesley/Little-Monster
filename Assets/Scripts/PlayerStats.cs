@@ -12,11 +12,13 @@ public class PlayerStats : MonoBehaviour {
 	public GameObject player;
     private ParticleSystem particles;
 	PlayerMovement playerMove;
+    AudioManager audioManager;
 
 	// Use this for initialization
 	void Start () {
 		playerMove = player.GetComponent<PlayerMovement> ();
         particles = player.GetComponent<ParticleSystem>();
+        audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
         killed = false;
 	}
 	
@@ -41,7 +43,9 @@ public class PlayerStats : MonoBehaviour {
 	{
 		currentCheckpoint = checkpoint;
 		respawnLocation = loc;
+        audioManager.SuccessMessage(currentCheckpoint);
 	}
+
 	public void killPlayer()
 	{
         player.transform.localScale = Vector3.zero;

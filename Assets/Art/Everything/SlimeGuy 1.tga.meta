@@ -1,0 +1,135 @@
+fileFormatVersion: 2
+guid: 3d1f9964644bbe5438b4fd7ac189a2d0
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: SlimeGuy_arm
+    21300002: SlimeGuy_hand
+    21300004: SlimeGuy
+    21300006: SlimeGuy_tail3
+    21300008: SlimeGuy_tail2
+    21300010: SlimeGuy_tail1
+    21300012: SlimeGuy_eye1
+    21300014: SlimeGuy_eye2
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: SlimeGuy_arm
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 434
+        width: 83
+        height: 106
+      alignment: 9
+      pivot: {x: .647504389, y: .835996211}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SlimeGuy_hand
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 430
+        width: 108
+        height: 99
+      alignment: 9
+      pivot: {x: .159920156, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SlimeGuy
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 35
+        width: 254
+        height: 471
+      alignment: 9
+      pivot: {x: .421126842, y: .485821903}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SlimeGuy_tail3
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 334
+        width: 104
+        height: 60
+      alignment: 5
+      pivot: {x: 1, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SlimeGuy_tail2
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 225
+        width: 84
+        height: 60
+      alignment: 5
+      pivot: {x: 1, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SlimeGuy_tail1
+      rect:
+        serializedVersion: 2
+        x: 157
+        y: 237
+        width: 109
+        height: 68
+      alignment: 5
+      pivot: {x: 1, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SlimeGuy_eye1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 39
+        width: 81
+        height: 84
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SlimeGuy_eye2
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 60
+        width: 58
+        height: 63
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
