@@ -3,7 +3,7 @@ using System.Collections;
 
 public class RopeTie : MonoBehaviour
 {
-	private Rigidbody2D _startPointRigidbody;
+    private Rigidbody2D _startPointRigidbody;
     private Transform _startPoint;
     private Transform _midPoint;
     private Transform _endPoint;
@@ -11,13 +11,13 @@ public class RopeTie : MonoBehaviour
     MeshRenderer sideBound;
     RaycastHit2D hit;
     string hitTag;
-	bool cut = false;
+    bool cut = false;
 
     // Use this for initialization
     void Start()
     {
         _startPoint = GameObject.FindWithTag("StartPoint").GetComponent<Transform>();
-		_startPointRigidbody = _startPoint.parent.rigidbody2D;
+        _startPointRigidbody = _startPoint.parent.rigidbody2D;
         _midPoint = this.transform;
         _endPoint = GameObject.FindWithTag("EndPoint").GetComponent<Transform>();
 
@@ -30,15 +30,18 @@ public class RopeTie : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		if (!cut) {
-			_line.SetPosition (0, _startPoint.position);
-			_line.SetPosition (1, _midPoint.position);
-			_line.SetPosition (2, _endPoint.position);
-		} else if (cut) {
-			_line.SetVertexCount (2);
-			_line.SetPosition (0, _startPoint.position);
-			_line.SetPosition (1, _midPoint.position);
-		}
+        if (!cut)
+        {
+            _line.SetPosition(0, _startPoint.position);
+            _line.SetPosition(1, _midPoint.position);
+            _line.SetPosition(2, _endPoint.position);
+        }
+        else if (cut)
+        {
+            _line.SetVertexCount(2);
+            _line.SetPosition(0, _startPoint.position);
+            _line.SetPosition(1, _midPoint.position);
+        }
 
         hit = Physics2D.Linecast(_midPoint.position, _endPoint.position);
         Debug.DrawLine(_midPoint.position, _endPoint.position);
@@ -55,18 +58,17 @@ public class RopeTie : MonoBehaviour
             }
             if (hitTag == "Claw")
             {
-				cut = true;
-				SetPhysics ();
+                cut = true;
+                SetPhysics();
             }
         }
         hitTag = null;
-        
+
     }
 
-	void SetPhysics()
-	{
-		_startPointRigidbody.isKinematic = false;
-		_startPointRigidbody.gravityScale = 1f;
-	}
-
+    void SetPhysics()
+    {
+        _startPointRigidbody.isKinematic = false;
+        _startPointRigidbody.gravityScale = 1f;
+    }
 }
