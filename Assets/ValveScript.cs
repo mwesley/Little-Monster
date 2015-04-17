@@ -9,7 +9,7 @@ public class ValveScript : MonoBehaviour
 
     private LineRenderer _line;
     private string hitTag;
-    private bool _valveHit = false;
+    public bool ValveHitBool = false;
     public ForcePlatform ForcePlatformScript;
 
     // Use this for initialization
@@ -22,11 +22,11 @@ public class ValveScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!_valveHit)
+        if(!ValveHitBool)
         {
             ValveNotHit();
         }
-        else if (_valveHit)
+        else if (ValveHitBool)
         {
             ValveHit();
         }
@@ -42,7 +42,7 @@ public class ValveScript : MonoBehaviour
     void ValveHit()
     {
         Debug.Log("Valvehit");
-        _valveHit = true;
+        ValveHitBool = true;
         ForcePlatformScript.enabled = true;
         _line.enabled = false;
     }
