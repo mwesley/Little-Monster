@@ -128,11 +128,12 @@ public class AutoTileSetManagerEditor : Editor {
 	
 	Tool savedTool;
 	void OnEnable() {
-		savedTool=Tools.current;
-		Tools.current=Tool.None;
+	//	savedTool=Tools.current;
+	//	Tools.current=Tool.None;
+		Debug.Log ("hi");
 	}
 	
 	void OnDisable() {
-		Tools.current=savedTool;
+	//	Tools.current=savedTool;
 	}
 }

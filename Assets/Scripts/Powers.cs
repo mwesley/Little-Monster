@@ -5,11 +5,15 @@ public class Powers : MonoBehaviour {
 	public GameObject ClawL;
 	public GameObject ClawR;
 	public GameObject ClawEffect;
+	public GameObject FrostBreath;
+	public GameObject BreathL;
+	public GameObject BreathR;
 	public Transform ClawSpawnL;
 	public Transform ClawSpawnR;
 	public Transform EffectSpawnL;
 	public Transform EffectSpawnR;
-		public static bool GotClaw;
+	public static bool GotClaw;
+	public bool GotFrost;
 
 	// Use this for initialization
 	void Start () {
@@ -37,6 +41,29 @@ public class Powers : MonoBehaviour {
 
 			}
 		}
+		if(Input.GetButtonDown("Fire1") && GotFrost == true)
+		   {
+			if(MousePosition.x>Playerpos.x)
+			{
+				(Instantiate (FrostBreath, transform.position, Quaternion.Euler(0,90,0)) as GameObject).transform.parent =  gameObject.transform;
+				BreathR.SetActive(true);
+
+			}
+			else if (MousePosition.x<Playerpos.x)
+			{
+				(Instantiate (FrostBreath, transform.position, Quaternion.Euler(0,-90,0)) as GameObject).transform.parent =  gameObject.transform;
+
+				BreathL.SetActive(true);
+
+			}
+
+		}
+		if (Input.GetButtonUp ("Fire1")) {
+			BreathR.SetActive(false);
+			BreathL.SetActive(false);
+			Destroy(GameObject.Find("FrostBreath(Clone)"));
+
+				}
 
 
 	}
