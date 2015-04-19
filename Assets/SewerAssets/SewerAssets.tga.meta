@@ -1,0 +1,157 @@
+fileFormatVersion: 2
+guid: 87a4b1fef178a2445a10a4a4563c28f4
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: SewerAssets_0
+    21300002: SewerAssets_1
+    21300004: SewerAssets_2
+    21300006: SewerAssets_3
+    21300008: SewerAssets_4
+    21300010: SewerAssets_5
+    21300012: SewerAssets_6
+    21300014: SewerAssets_7
+    21300016: SewerAssets_8
+    21300018: SewerAssets_9
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: SewerAssets_0
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 300
+        width: 216
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SewerAssets_1
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 251
+        width: 50
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SewerAssets_2
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 224
+        width: 82
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SewerAssets_3
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 203
+        width: 83
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SewerAssets_4
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 141
+        width: 68
+        height: 42
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SewerAssets_5
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 138
+        width: 48
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SewerAssets_6
+      rect:
+        serializedVersion: 2
+        x: 243
+        y: 138
+        width: 70
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SewerAssets_7
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 107
+        width: 79
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SewerAssets_8
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 3
+        width: 194
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: SewerAssets_9
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 9
+        width: 79
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

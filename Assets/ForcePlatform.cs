@@ -15,6 +15,7 @@ public class ForcePlatform : MonoBehaviour
     private bool _fall;
     private float _timerOne = 0;
     private float _timerTwo = 0;
+    public Material LineMat;
 
     // Use this for initialization
     void Start()
@@ -22,6 +23,7 @@ public class ForcePlatform : MonoBehaviour
         _lerpTimer = 0;
         _line = this.gameObject.AddComponent<LineRenderer>();
         _line.SetVertexCount(2);
+        _line.material = LineMat;
     }
 
     // Update is called once per frame

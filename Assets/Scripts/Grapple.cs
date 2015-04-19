@@ -33,7 +33,7 @@ public class Grapple : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && !isGrappled)
+        if (Input.GetButtonDown("Fire2") && !isGrappled)
         {
             Debug.Log("Grappling");
             GrappleHook();
@@ -54,9 +54,9 @@ public class Grapple : MonoBehaviour
             x = dir.x;
             y = dir.y;
             theta = Mathf.Atan2(y, x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.AngleAxis(theta, Vector3.forward);
+            //transform.rotation = Quaternion.AngleAxis(theta, Vector3.forward);
         }
-        if (Input.GetButtonUp("Fire1") && isGrappled)
+        if (Input.GetButtonUp("Fire2") && isGrappled)
         {
             Destroy(hook);
             Destroy(player.GetComponent<SpringJoint2D>());

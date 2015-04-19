@@ -18,6 +18,7 @@ public class HookScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        MoveUpAndDownRope();
 
     }
 
@@ -32,6 +33,22 @@ public class HookScript : MonoBehaviour
             grappleRope.connectedBody = this.rigidbody2D;
             grappleRope.distance = dist;
             grappleRope.dampingRatio = 5f;
+        }
+    }
+
+    void MoveUpAndDownRope()
+    {
+        float y = Input.GetAxis("Vertical");
+        if (y > 0)
+        {
+            grappleRope.distance -= Time.deltaTime * 3;
+        }
+        else if (y < 0)
+        {
+            if (grappleRope.distance < 7.5f)
+            {
+                grappleRope.distance += Time.deltaTime * 3;
+            }
         }
     }
 }
