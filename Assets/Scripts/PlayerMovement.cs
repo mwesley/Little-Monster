@@ -101,7 +101,7 @@ public class PlayerMovement : MonoBehaviour {
 				if (!bouncing && !PlayerStats.killed && grounded) {
 						rigidbody2D.velocity = new Vector2 (move * speed, rigidbody2D.velocity.y);
 				} else if (!grounded) {
-						_xFactor = move * speed * 2f;
+						_xFactor = move * speed * 5f;
 						rigidbody2D.AddForce (new Vector2 (_xFactor, 0));
 						if (rigidbody2D.velocity.x >= speed) {
 								rigidbody2D.velocity = new Vector2 (speed, rigidbody2D.velocity.y);
