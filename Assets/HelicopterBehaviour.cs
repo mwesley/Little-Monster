@@ -7,6 +7,8 @@ public class HelicopterBehaviour : MonoBehaviour {
 	public GameObject prop1;
 	public GameObject prop2;
 	public GameObject explosion;
+	public bool canMove;
+	private GameObject lacthpos;
 
 	// Use this for initialization
 	void Start () {
@@ -20,25 +22,33 @@ public class HelicopterBehaviour : MonoBehaviour {
 	}
 	void MoveMe()
 	{
-		rigidbody2D.velocity = new Vector2 (-speed, 0);
-		prop1.transform.Rotate(new Vector3(0,speed*2,0));
-		prop2.transform.Rotate(new Vector3(0,speed*2,0));
+		if(canMove)
+		{
+			rigidbody2D.velocity = new Vector2 (-speed, 0);
+			prop1.transform.Rotate(new Vector3(0,speed*2,0));
+			prop2.transform.Rotate(new Vector3(0,speed*2,0));
+		}
+		else
+		{
+			rigidbody2D.velocity = Vector2.zero;
+		}
 	}
-	void KillMe()
+	public void KillMe()
 	{
 		Instantiate (explosion, transform.position, Quaternion.identity);
 		Destroy (this.gameObject);
 	}
-	void OnTriggerEnter2D(Collider2D col)
+	void OnCollisionEnter2D(Collider2D col)
 	{
 		if(col.gameObject.tag == "Player")
 		{
 			col.GetComponent<CityEnergy>().Heal(20f);
 			KillMe();
 		}
-		if(col.gameObject.tag == "Tongue")
+		if(col.gameObject.tag == "Hook")
 		{
-			///latch on
+			transform.parent = col.transform;
+			canMove = false;
 		}
 	}
 }

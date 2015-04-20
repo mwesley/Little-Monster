@@ -47,5 +47,9 @@ public class TankBehaviour : MonoBehaviour {
 		{
 			KillMe();
 		}
+		if(col.gameObject.tag == "Claw")
+		{
+			KillMe ();
+		}
 	}
 }
