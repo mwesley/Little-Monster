@@ -62,6 +62,7 @@ public class RopeTie : MonoBehaviour
                 SetPhysics();
             }
         }
+		Debug.Log (hitTag);
         hitTag = null;
 
     }
